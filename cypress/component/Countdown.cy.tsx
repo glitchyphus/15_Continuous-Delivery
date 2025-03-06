@@ -13,6 +13,7 @@ describe('<Countdown />', () => {
     cy.get('[data-cy="countdown"]').should('exist').and('have.text', 'Guesses Remaining: 5')
   })
 
+  
   it('should render a correct guess message', () => {
     cy.mount(<Countdown guesses={5} isCorrect={true} hasGuessed={true}/>)
     cy.get('[data-cy="toast"]').should('exist').and('contain.text', 'Correct!')
